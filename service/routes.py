@@ -25,14 +25,7 @@ def health():
 @app.route("/")
 def index():
     """Root URL response"""
-    return (
-        jsonify(
-            name="Account REST API Service",
-            version="1.0",
-            # paths=url_for("list_accounts", _external=True),
-        ),
-        status.HTTP_200_OK,
-    )
+    return (jsonify(name="Data Retrieval Service", version="1.0"), status.HTTP_200_OK)
 
 
 ######################################################################
