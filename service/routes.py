@@ -8,9 +8,6 @@ from flask import jsonify, request, make_response, abort, url_for   # noqa; F401
 from service.models import Account
 from service.common import status  # HTTP Status Codes
 from . import app  # Import Flask application
-from flask_talisman import Talisman
-
-talisman = Talisman(app)
 
 ############################################################
 # Health Endpoint
@@ -27,14 +24,7 @@ def health():
 @app.route("/")
 def index():
     """Root URL response"""
-    return (
-        jsonify(
-            name="Account REST API Service",
-            version="1.0",
-            # paths=url_for("list_accounts", _external=True),
-        ),
-        status.HTTP_200_OK,
-    )
+    return (jsonify(name="Data Retrieval Service", version="1.0"), status.HTTP_200_OK)
 
 
 ######################################################################
