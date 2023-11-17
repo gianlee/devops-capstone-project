@@ -6,7 +6,7 @@ import logging
 import unittest
 import os
 from service import app
-from service.models import Account, DataValidationError, db
+from service.models import Account, DataValidationError, db 
 from tests.factories import AccountFactory
 
 DATABASE_URI = os.getenv(
